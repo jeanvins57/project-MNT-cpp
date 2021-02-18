@@ -1,0 +1,134 @@
+\hypertarget{class_p_p_m}{}\doxysection{PPM Class Reference}
+\label{class_p_p_m}\index{PPM@{PPM}}
+
+
+creates \mbox{\hyperlink{class_p_p_m}{PPM}} image.  
+
+
+
+
+{\ttfamily \#include $<$PPM.\+h$>$}
+
+
+
+Collaboration diagram for PPM\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=146pt]{class_p_p_m__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_p_p_m_1_1_r_g_b}{RGB}}
+\begin{DoxyCompactList}\small\item\em Objet char. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_p_m_a72dd35d5cf6836724b6e559cc942e4fc}\label{class_p_p_m_a72dd35d5cf6836724b6e559cc942e4fc}} 
+\mbox{\hyperlink{class_p_p_m_a72dd35d5cf6836724b6e559cc942e4fc}{$\sim$\+PPM}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{class_p_p_m_a9e0fb5e4925aff0756029d593567555b}{PPM\+::\+PPM}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_p_p_m_a9e0fb5e4925aff0756029d593567555b}{PPM}} (int height, int width)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_p_p_m_a9e0fb5e4925aff0756029d593567555b}{PPM\+::\+PPM}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_p_p_m_a3573067f7850202571988cce74f59d19}\label{class_p_p_m_a3573067f7850202571988cce74f59d19}} 
+void {\bfseries set\+\_\+width} (int width)
+\item 
+\mbox{\Hypertarget{class_p_p_m_aac9d7ce84a3ce055eefb43e4ffbbfa56}\label{class_p_p_m_aac9d7ce84a3ce055eefb43e4ffbbfa56}} 
+void {\bfseries set\+\_\+height} (int height)
+\item 
+\mbox{\Hypertarget{class_p_p_m_a79983d887033135b949940209991210a}\label{class_p_p_m_a79983d887033135b949940209991210a}} 
+void {\bfseries set\+\_\+version} (string version)
+\item 
+void \mbox{\hyperlink{class_p_p_m_a7275f6e5d365eb785c97d2b7f6972338}{save}} (string name\+\_\+file)
+\begin{DoxyCompactList}\small\item\em Save the image structre in a \mbox{\hyperlink{class_p_p_m}{PPM}} file format. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_p_p_m_a38dad4ded4b4831ee68571335c302f6c}\label{class_p_p_m_a38dad4ded4b4831ee68571335c302f6c}} 
+void \mbox{\hyperlink{class_p_p_m_a38dad4ded4b4831ee68571335c302f6c}{delete\+\_\+image}} ()
+\begin{DoxyCompactList}\small\item\em delete content of \mbox{\hyperlink{class_p_p_m}{PPM}} file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_p_p_m_a0117d6a77f78fee3f2fbc37272d70784}{write\+\_\+2\+\_\+\+PPM}} (int width, int heigth, \mbox{\hyperlink{struct_coords}{Coords}} $\ast$coordinates, string name\+\_\+file)
+\begin{DoxyCompactList}\small\item\em Write data to the Portable Pixmap file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_p_m_a26cd0854764c6af9fdd7bc09d5c661e5}\label{class_p_p_m_a26cd0854764c6af9fdd7bc09d5c661e5}} 
+\mbox{\hyperlink{struct_p_p_m_1_1_r_g_b}{RGB}} $\ast$$\ast$ {\bfseries image} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+creates \mbox{\hyperlink{class_p_p_m}{PPM}} image. 
+
+Object \mbox{\hyperlink{class_p_p_m}{PPM}}.
+
+\begin{DoxyAuthor}{Author}
+Jean-\/\+Vincent KLEIN 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_p_p_m_a9e0fb5e4925aff0756029d593567555b}\label{class_p_p_m_a9e0fb5e4925aff0756029d593567555b}} 
+\index{PPM@{PPM}!PPM@{PPM}}
+\index{PPM@{PPM}!PPM@{PPM}}
+\doxysubsubsection{\texorpdfstring{PPM()}{PPM()}}
+{\footnotesize\ttfamily PPM\+::\+PPM (\begin{DoxyParamCaption}\item[{int}]{height,  }\item[{int}]{width }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_p_p_m_a9e0fb5e4925aff0756029d593567555b}{PPM\+::\+PPM}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em height} & \\
+\hline
+{\em width} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_p_p_m_a7275f6e5d365eb785c97d2b7f6972338}\label{class_p_p_m_a7275f6e5d365eb785c97d2b7f6972338}} 
+\index{PPM@{PPM}!save@{save}}
+\index{save@{save}!PPM@{PPM}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void PPM\+::save (\begin{DoxyParamCaption}\item[{string}]{name\+\_\+file }\end{DoxyParamCaption})}
+
+
+
+Save the image structre in a \mbox{\hyperlink{class_p_p_m}{PPM}} file format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name\+\_\+file} & name of the file. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_p_p_m_a0117d6a77f78fee3f2fbc37272d70784}\label{class_p_p_m_a0117d6a77f78fee3f2fbc37272d70784}} 
+\index{PPM@{PPM}!write\_2\_PPM@{write\_2\_PPM}}
+\index{write\_2\_PPM@{write\_2\_PPM}!PPM@{PPM}}
+\doxysubsubsection{\texorpdfstring{write\_2\_PPM()}{write\_2\_PPM()}}
+{\footnotesize\ttfamily void PPM\+::write\+\_\+2\+\_\+\+PPM (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{heigth,  }\item[{\mbox{\hyperlink{struct_coords}{Coords}} $\ast$}]{coordinates,  }\item[{string}]{name\+\_\+file }\end{DoxyParamCaption})}
+
+
+
+Write data to the Portable Pixmap file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Width of desired PGM file. \\
+\hline
+{\em heigth} & Height of desired PGM file. \\
+\hline
+{\em coordinates} & Structure Coordinates containing x,y,z in L93 system. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/jvk/\+Bureau/cpp\+\_\+\+\_\+projet\+\_\+mnt/src/\mbox{\hyperlink{_p_p_m_8h}{PPM.\+h}}\item 
+/home/jvk/\+Bureau/cpp\+\_\+\+\_\+projet\+\_\+mnt/src/\mbox{\hyperlink{_p_p_m_8cpp}{PPM.\+cpp}}\end{DoxyCompactItemize}

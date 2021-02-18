@@ -1,0 +1,62 @@
+\hypertarget{_p_g_m_8cpp}{}\doxysection{/home/jvk/\+Bureau/cpp\+\_\+\+\_\+projet\+\_\+mnt/src/\+PGM.cpp File Reference}
+\label{_p_g_m_8cpp}\index{/home/jvk/Bureau/cpp\_\_projet\_mnt/src/PGM.cpp@{/home/jvk/Bureau/cpp\_\_projet\_mnt/src/PGM.cpp}}
+
+
+Functions generating raster in PGM file format.  
+
+
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include \char`\"{}PGM.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}toolbox.\+h\char`\"{}}\newline
+Include dependency graph for PGM.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_p_g_m_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_p_g_m_8cpp_acd074e3b6a2a457e766586f0a756c9e9}{write\+\_\+2\+\_\+\+PGM}} (int width, int height, \mbox{\hyperlink{struct_coords}{Coords}} $\ast$coordinates, string name)
+\begin{DoxyCompactList}\small\item\em Write scaled data to a Portable Greyscale Map (PGM) image. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions generating raster in PGM file format. 
+
+\begin{DoxyAuthor}{Author}
+Jean-\/\+Vincent KLEIN (\href{mailto:jean-vincent.klein@ensta-bretagne.org}{\texttt{ jean-\/vincent.\+klein@ensta-\/bretagne.\+org}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2021-\/01-\/14 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_p_g_m_8cpp_acd074e3b6a2a457e766586f0a756c9e9}\label{_p_g_m_8cpp_acd074e3b6a2a457e766586f0a756c9e9}} 
+\index{PGM.cpp@{PGM.cpp}!write\_2\_PGM@{write\_2\_PGM}}
+\index{write\_2\_PGM@{write\_2\_PGM}!PGM.cpp@{PGM.cpp}}
+\doxysubsubsection{\texorpdfstring{write\_2\_PGM()}{write\_2\_PGM()}}
+{\footnotesize\ttfamily void write\+\_\+2\+\_\+\+PGM (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height,  }\item[{\mbox{\hyperlink{struct_coords}{Coords}} $\ast$}]{coordinates,  }\item[{string}]{name }\end{DoxyParamCaption})}
+
+
+
+Write scaled data to a Portable Greyscale Map (PGM) image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Width of desired PGM file. \\
+\hline
+{\em height} & Height of desired PGM file. \\
+\hline
+{\em coordinates} & Structure Coordinates containing x,y,z in L93 system. \\
+\hline
+{\em name} & Name of the name. \\
+\hline
+\end{DoxyParams}

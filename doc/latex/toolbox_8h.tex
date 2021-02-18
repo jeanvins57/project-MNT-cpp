@@ -1,0 +1,220 @@
+\hypertarget{toolbox_8h}{}\doxysection{/home/jvk/\+Bureau/cpp\+\_\+\+\_\+projet\+\_\+mnt/src/toolbox.h File Reference}
+\label{toolbox_8h}\index{/home/jvk/Bureau/cpp\_\_projet\_mnt/src/toolbox.h@{/home/jvk/Bureau/cpp\_\_projet\_mnt/src/toolbox.h}}
+
+
+Functions used widely for generation of both \mbox{\hyperlink{class_p_p_m}{PPM}} and PGM file formats.  
+
+
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+Include dependency graph for toolbox.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{toolbox_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{toolbox_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_coords}{Coords}}
+\begin{DoxyCompactList}\small\item\em Structures contqining x,y,z values of data points. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{toolbox_8h_a93f03159397f25c687840129b18c972d}\label{toolbox_8h_a93f03159397f25c687840129b18c972d}} 
+\#define {\bfseries PBSTR}~\char`\"{}$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$$\vert$\char`\"{}
+\item 
+\mbox{\Hypertarget{toolbox_8h_a69793e71975c25754a8236df29896e15}\label{toolbox_8h_a69793e71975c25754a8236df29896e15}} 
+\#define {\bfseries PBWIDTH}~60
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{toolbox_8h_a83b063a46afe04d66a1364a760b43f24}\label{toolbox_8h_a83b063a46afe04d66a1364a760b43f24}} 
+int {\bfseries wgs84\+\_\+to\+\_\+\+L93} (const string \&myfile, \mbox{\hyperlink{struct_coords}{Coords}} $\ast$coordinates)
+\item 
+double \mbox{\hyperlink{toolbox_8h_a2f8c6669531b6045d834c5779c0d3d6b}{min}} (vector$<$ double $>$ \&v)
+\begin{DoxyCompactList}\small\item\em Function returning minimum value of a vector. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{toolbox_8h_a0a3034d7f9e465d7730ae4b3f5d96478}{max}} (vector$<$ double $>$ \&v)
+\begin{DoxyCompactList}\small\item\em Function returning maximum value of a vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{toolbox_8h_ac47e1d9f8c9c60063414feba45fb90ce}{shift\+\_\+data}} (\mbox{\hyperlink{struct_coords}{Coords}} $\ast$coordinates)
+\begin{DoxyCompactList}\small\item\em Shift data for cross-\/multiplication. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{toolbox_8h_a7b15b61c3f547e21e7d70a8c419eb38a}\label{toolbox_8h_a7b15b61c3f547e21e7d70a8c419eb38a}} 
+vector$<$ vector$<$ double $>$ $>$ {\bfseries init\+\_\+matrix} (int height, int width)
+\item 
+void \mbox{\hyperlink{toolbox_8h_a2cfd6dfaee0af82d9b0a8af4f866af19}{altitude\+\_\+2\+\_\+rgb}} (int rgb\mbox{[}3\mbox{]}, float val)
+\begin{DoxyCompactList}\small\item\em Function converting float value to table of 3 int values RGB. (short Rainbow RGB algorithm) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{toolbox_8h_a051eb9b02aa1d3d4a4ad75e35ae55529}{rgb\+\_\+2\+\_\+hsv}} (int rgb\mbox{[}3\mbox{]}, double hsv\mbox{[}3\mbox{]})
+\begin{DoxyCompactList}\small\item\em Change color system from RGB to HSV. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{toolbox_8h_a99fbc01c2809e1ee48af162572fb23d1}{hsv\+\_\+2\+\_\+rgb}} (double hsv\mbox{[}3\mbox{]}, int rgb\mbox{[}3\mbox{]})
+\begin{DoxyCompactList}\small\item\em Change color system from HSV to RGB. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{toolbox_8h_a03acab331048cf599ac3ab418b5e15eb}\label{toolbox_8h_a03acab331048cf599ac3ab418b5e15eb}} 
+int {\bfseries compute\+\_\+hillshade} (double a, double b, double c, double d, double f, double g, double h, double l, float azim, float alt)
+\item 
+void \mbox{\hyperlink{toolbox_8h_acb6cb54b4c6edb3d22664ceac34c2919}{set\+\_\+V}} (float hs, double hsv\mbox{[}3\mbox{]})
+\begin{DoxyCompactList}\small\item\em Setter for V value in a table HSV and a corresponding hill\+Shade computed previously. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{toolbox_8h_a9d3b483a858efb84ce776bed255b6dd6}{print\+Progress}} (double percentage)
+\begin{DoxyCompactList}\small\item\em Status/\+Progress bar to make user wait while work in progress Caution\+: Slows down the processes. Needs to be optimized. ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions used widely for generation of both \mbox{\hyperlink{class_p_p_m}{PPM}} and PGM file formats. 
+
+\begin{DoxyAuthor}{Author}
+Jean-\/\+Vincent KLEIN (\href{mailto:jean-vincent.klein@ensta-bretagne.org}{\texttt{ jean-\/vincent.\+klein@ensta-\/bretagne.\+org}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2021-\/01-\/14 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{toolbox_8h_a2cfd6dfaee0af82d9b0a8af4f866af19}\label{toolbox_8h_a2cfd6dfaee0af82d9b0a8af4f866af19}} 
+\index{toolbox.h@{toolbox.h}!altitude\_2\_rgb@{altitude\_2\_rgb}}
+\index{altitude\_2\_rgb@{altitude\_2\_rgb}!toolbox.h@{toolbox.h}}
+\doxysubsubsection{\texorpdfstring{altitude\_2\_rgb()}{altitude\_2\_rgb()}}
+{\footnotesize\ttfamily void altitude\+\_\+2\+\_\+rgb (\begin{DoxyParamCaption}\item[{int}]{rgb\mbox{[}3\mbox{]},  }\item[{float}]{val }\end{DoxyParamCaption})}
+
+
+
+Function converting float value to table of 3 int values RGB. (short Rainbow RGB algorithm) 
+
+\begin{DoxyAuthor}{Author}
+particleincell.\+com/2014/colormap/ (edited) 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em rgb} & Table of 3 int elements. \\
+\hline
+{\em val} & Table of 3 float elements. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{toolbox_8h_a99fbc01c2809e1ee48af162572fb23d1}\label{toolbox_8h_a99fbc01c2809e1ee48af162572fb23d1}} 
+\index{toolbox.h@{toolbox.h}!hsv\_2\_rgb@{hsv\_2\_rgb}}
+\index{hsv\_2\_rgb@{hsv\_2\_rgb}!toolbox.h@{toolbox.h}}
+\doxysubsubsection{\texorpdfstring{hsv\_2\_rgb()}{hsv\_2\_rgb()}}
+{\footnotesize\ttfamily void hsv\+\_\+2\+\_\+rgb (\begin{DoxyParamCaption}\item[{double}]{hsv\mbox{[}3\mbox{]},  }\item[{int}]{rgb\mbox{[}3\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Change color system from HSV to RGB. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hsv} & Table of 3 double elements. \\
+\hline
+{\em rgb} & Table of 3 int elements. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{toolbox_8h_a0a3034d7f9e465d7730ae4b3f5d96478}\label{toolbox_8h_a0a3034d7f9e465d7730ae4b3f5d96478}} 
+\index{toolbox.h@{toolbox.h}!max@{max}}
+\index{max@{max}!toolbox.h@{toolbox.h}}
+\doxysubsubsection{\texorpdfstring{max()}{max()}}
+{\footnotesize\ttfamily double max (\begin{DoxyParamCaption}\item[{vector$<$ double $>$ \&}]{v }\end{DoxyParamCaption})}
+
+
+
+Function returning maximum value of a vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Vector with double elements. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{toolbox_8h_a2f8c6669531b6045d834c5779c0d3d6b}\label{toolbox_8h_a2f8c6669531b6045d834c5779c0d3d6b}} 
+\index{toolbox.h@{toolbox.h}!min@{min}}
+\index{min@{min}!toolbox.h@{toolbox.h}}
+\doxysubsubsection{\texorpdfstring{min()}{min()}}
+{\footnotesize\ttfamily double min (\begin{DoxyParamCaption}\item[{vector$<$ double $>$ \&}]{v }\end{DoxyParamCaption})}
+
+
+
+Function returning minimum value of a vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Vector with double elements. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{toolbox_8h_a9d3b483a858efb84ce776bed255b6dd6}\label{toolbox_8h_a9d3b483a858efb84ce776bed255b6dd6}} 
+\index{toolbox.h@{toolbox.h}!printProgress@{printProgress}}
+\index{printProgress@{printProgress}!toolbox.h@{toolbox.h}}
+\doxysubsubsection{\texorpdfstring{printProgress()}{printProgress()}}
+{\footnotesize\ttfamily void print\+Progress (\begin{DoxyParamCaption}\item[{double}]{percentage }\end{DoxyParamCaption})}
+
+
+
+Status/\+Progress bar to make user wait while work in progress Caution\+: Slows down the processes. Needs to be optimized. ~\newline
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em percentage} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{toolbox_8h_a051eb9b02aa1d3d4a4ad75e35ae55529}\label{toolbox_8h_a051eb9b02aa1d3d4a4ad75e35ae55529}} 
+\index{toolbox.h@{toolbox.h}!rgb\_2\_hsv@{rgb\_2\_hsv}}
+\index{rgb\_2\_hsv@{rgb\_2\_hsv}!toolbox.h@{toolbox.h}}
+\doxysubsubsection{\texorpdfstring{rgb\_2\_hsv()}{rgb\_2\_hsv()}}
+{\footnotesize\ttfamily void rgb\+\_\+2\+\_\+hsv (\begin{DoxyParamCaption}\item[{int}]{rgb\mbox{[}3\mbox{]},  }\item[{double}]{hsv\mbox{[}3\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Change color system from RGB to HSV. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rgb} & Table of 3 int elements. \\
+\hline
+{\em hsv} & Table of 3 double elements. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{toolbox_8h_acb6cb54b4c6edb3d22664ceac34c2919}\label{toolbox_8h_acb6cb54b4c6edb3d22664ceac34c2919}} 
+\index{toolbox.h@{toolbox.h}!set\_V@{set\_V}}
+\index{set\_V@{set\_V}!toolbox.h@{toolbox.h}}
+\doxysubsubsection{\texorpdfstring{set\_V()}{set\_V()}}
+{\footnotesize\ttfamily void set\+\_\+V (\begin{DoxyParamCaption}\item[{float}]{hs,  }\item[{double}]{hsv\mbox{[}3\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Setter for V value in a table HSV and a corresponding hill\+Shade computed previously. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hs} & Hill\+Shade \\
+\hline
+{\em hsv} & Table of 3 double elements. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{toolbox_8h_ac47e1d9f8c9c60063414feba45fb90ce}\label{toolbox_8h_ac47e1d9f8c9c60063414feba45fb90ce}} 
+\index{toolbox.h@{toolbox.h}!shift\_data@{shift\_data}}
+\index{shift\_data@{shift\_data}!toolbox.h@{toolbox.h}}
+\doxysubsubsection{\texorpdfstring{shift\_data()}{shift\_data()}}
+{\footnotesize\ttfamily void shift\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_coords}{Coords}} $\ast$}]{coordinates }\end{DoxyParamCaption})}
+
+
+
+Shift data for cross-\/multiplication. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em coordinates} & Structures \mbox{\hyperlink{struct_coords}{Coords}} containing x,y and z values. \\
+\hline
+\end{DoxyParams}

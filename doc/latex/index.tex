@@ -1,0 +1,20 @@
+\label{index_md__home_jvk_Bureau_cpp__projet_mnt_README}%
+\Hypertarget{index_md__home_jvk_Bureau_cpp__projet_mnt_README}%
+ Jean-\/\+Vincent KLEIN -\/ FISE2022 see gitlab rep \+: \href{https://gitlab.ensta-bretagne.fr/kleinje/cpp__projet_mnt}{\texttt{ https\+://gitlab.\+ensta-\/bretagne.\+fr/kleinje/cpp\+\_\+\+\_\+projet\+\_\+mnt}}
+
+Project for M. ROHOU\textquotesingle{}s C++ class. Please find instructions here \+: \href{http://simon-rohou.fr/cours/c++/doc/06/cpp_06_projet_carte.pdf}{\texttt{ http\+://simon-\/rohou.\+fr/cours/c++/doc/06/cpp\+\_\+06\+\_\+projet\+\_\+carte.\+pdf}} (french)
+
+External library required \+: PROJ. visit proj.\+org/install.html
+
+The program reads a MNT file using WGS84 coordinates. It converts them in the Lambert 93 coordinates (popular in France).
+
+It then generates two rasters\+: one in black and white, another one in colours.
+
+Problems identified\+:
+\begin{DoxyItemize}
+\item A Delaunay\textquotesingle{}s triangulation should be implemented in order to have a raster with matching coordinates. I did not do it in this version as the data was giving a clear result already. Assumption\+: height = width.
+\item The progress bar slows down considerably the program.
+\item The Hill\+Shade has been implemented but is not working properly yet.
+\item Core dumps can occur for width = 1080
+\item No unitary test 
+\end{DoxyItemize}
